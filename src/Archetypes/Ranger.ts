@@ -18,6 +18,10 @@ class Ranger extends Archetype {
   static createdArchetypeInstances(): number {
     return Ranger._createdInstances;
   }
+
+  override get name(): string {
+    return this.name;
+  }
 }
 
 export default Ranger;

@@ -1,4 +1,4 @@
-import Fighter from '../Figther';
+import Fighter from '../Fighter';
 import Battle from './Battle';
 
 class PVP extends Battle {

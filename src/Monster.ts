@@ -1,5 +1,5 @@
 // src/Monster.ts
-import Fighter, { SimpleFighter } from './Figther';
+import Fighter, { SimpleFighter } from './Fighter';
 
 class Monster implements SimpleFighter {
   private _lifePoints: number;

@@ -1,9 +1,9 @@
 import Archetype, { Mage } from './Archetypes';
 import Energy from './Energy';
-import Fighter from './Figther';
+import Fighter from './Fighter';
 import Race, { Elf } from './Races';
 import getRandomInt from './utils';
-import SimpleFighter from './Figther/SimpleFighter';
+import SimpleFighter from './Fighter/SimpleFighter';
 
 class Character implements Fighter {
   private _race: Race;

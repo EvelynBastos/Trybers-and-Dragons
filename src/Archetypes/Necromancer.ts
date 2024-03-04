@@ -18,6 +18,10 @@ class Necromancer extends Archetype {
   static createdArchetypeInstances(): number {
     return Necromancer._createdInstances;
   }
+
+  override get name(): string {
+    return this.name;
+  }
 }
 
 export default Necromancer;

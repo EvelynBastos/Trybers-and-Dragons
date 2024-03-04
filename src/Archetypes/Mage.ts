@@ -18,6 +18,10 @@ class Mage extends Archetype {
   static createdArchetypeInstances(): number {
     return Mage._createdInstances;
   }
+
+  override get name(): string {
+    return this.name;
+  }
 }
 
 export default Mage;

@@ -18,6 +18,10 @@ class Warrior extends Archetype {
   static createdArchetypeInstances(): number {
     return Warrior._createdInstances;
   }
+
+  override get name(): string {
+    return this.name;
+  }
 }
 
 export default Warrior;
