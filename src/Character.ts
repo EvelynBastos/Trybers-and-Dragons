@@ -3,6 +3,7 @@ import Energy from './Energy';
 import Fighter from './Figther';
 import Race, { Elf } from './Races';
 import getRandomInt from './utils';
+import SimpleFighter from './Figther/SimpleFighter';
 
 class Character implements Fighter {
   private _race: Race;
@@ -72,7 +73,7 @@ class Character implements Fighter {
     return this._lifePoints;
   }
 
-  attack(enemy: Fighter): void {
+  attack(enemy: Fighter | SimpleFighter): void {
     enemy.receiveDamage(this._strength);
   }
 
@@ -88,7 +89,7 @@ class Character implements Fighter {
     this._lifePoints = this._maxLifePoints;
   }
 
-  special(enemy: Fighter): void {
+  special(enemy: Fighter | SimpleFighter): void {
     const superPower = 15;
     enemy.receiveDamage(superPower);
     console.log(`${this._name} uses his super power!`);

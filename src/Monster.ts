@@ -1,5 +1,5 @@
 // src/Monster.ts
-import { SimpleFighter } from './Figther';
+import Fighter, { SimpleFighter } from './Figther';
 
 class Monster implements SimpleFighter {
   private _lifePoints: number;
@@ -18,8 +18,9 @@ class Monster implements SimpleFighter {
     return this._strength;
   }
 
-  receiveDamage(attackPoints: number) {
-    this._lifePoints -= attackPoints;
+  receiveDamage(attackPoints: number): number {
+    const damage = attackPoints;
+    this._lifePoints -= damage;
 
     if (this._lifePoints <= 0) {
       this._lifePoints = -1;
@@ -28,7 +29,7 @@ class Monster implements SimpleFighter {
     return this._lifePoints;
   }
 
-  attack(enemy: SimpleFighter): void {
+  attack(enemy: Fighter): void {
     enemy.receiveDamage(this._strength);
   }
 }
